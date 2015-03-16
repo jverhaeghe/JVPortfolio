@@ -31,7 +31,7 @@ gulp.task('webserver', function() {
 
 // --------- BUILDER
 gulp.task('compile-js', function () {
-    gulp.src(['!app/**/*test.js','!app/bower_components/**/*.js','app/*.js','app/*/*.js'])
+    gulp.src(['!app/**/*test.js','!app/dist/*.js','app/**/*.module.js','app/**/*.js'])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('dist/assets/js/'))
         .pipe(uglify())
@@ -70,6 +70,7 @@ gulp.task('watch', function() {
     gulp.watch('app/assets/scss/**/*.scss', ['compile-scss']);
 
     gulp.watch('app/**/*.js', ['compile-js']);
+
 
     gulp.watch('app/**/*.html', ['compile-html']);
 
