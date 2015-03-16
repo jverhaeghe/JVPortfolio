@@ -22,7 +22,9 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-view></div>
+  <div class="view-container">
+    <div class="page {{ pageClass }}" ng-view></div>
+  </div>
 
 
   <!-- In production use:
@@ -33,6 +35,7 @@
   <script src="./bower_components/angular-animate/angular-animate.js"></script>
   <script src="./bower_components/angular-google-analytics/dist/angular-google-analytics.js"></script>
   <script src="./assets/js/app.js"></script>
+
 
 </body>
 </html>

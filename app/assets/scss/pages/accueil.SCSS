@@ -1,0 +1,70 @@
+.accueil{
+
+  #accueil{
+    display: none;
+  }
+
+
+  > div {
+    margin: 10px 0 0 0;
+    @include tablet {
+      margin: 15px 0 0 0;
+    }
+    @include desktop {
+      margin: 25px 0 0 0;
+    }
+  }
+
+  h1{
+    font-size: 40px;
+
+    @include both {
+      font-size: 8.9vw;
+    }
+
+    strong {
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+  }
+  h3{
+    color: #595959;
+    font-size: 20px;
+    @include both {
+      font-size: 4.2vw;
+    }
+  }
+
+  .left{
+    @include both{
+      width: 66.6%;
+    }
+  }
+
+  .right{
+    overflow : hidden;
+    @include both{
+      width: 33%;
+    }
+  }
+
+  p{
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    @include both{
+      font-size: 3vw;
+    }
+  }
+
+}
+
+
+.accueil.ng-enter {
+  animation: 1s fade-in;
+  z-index: 100;
+}
+
+.accueil.ng-leave {
+  animation: 1s fade-out;
+  z-index:99;
+}

@@ -1,11 +1,12 @@
 (function() {
   'use strict';
 
-  angular.module('JVPortfolio.home', ['ngRoute'])
+  angular.module('JVPortfolio.home', [])
     .controller('HomeView', HomeView);
 
-  //Accueil.$inject = ["$scope","$rootScope"]; // needed for compression
-  function HomeView(){
-
+  HomeView.$inject = ["$scope"]; // needed for compression
+  function HomeView($scope){
+    var vm = $scope;
+    $scope.pageClass = "accueil";
   }
 })();

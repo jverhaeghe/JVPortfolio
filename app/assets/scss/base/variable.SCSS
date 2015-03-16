@@ -1,0 +1,24 @@
+$tonic : #F2831D;
+$text-color : #242424;
+$heavy-color : #0F0F0F;
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$mobile-width: 480px;
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin both {
+  @media (min-width: #{$mobile-width}) {
+    @content;
+  }
+}

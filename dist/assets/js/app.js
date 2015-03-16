@@ -104,22 +104,24 @@
 })();
 (function() {
   'use strict';
-  angular.module('JVPortfolio.contact', ['ngRoute'])
+  angular.module('JVPortfolio.contact', [])
     .controller('ContactView', ContactView);
 
-  //Accueil.$inject = ["$scope","$rootScope"]; // needed for compression
-  function ContactView(){
-
+  ContactView.$inject = ["$scope"]; // needed for compression
+  function ContactView($scope){
+    var vm = $scope;
+    $scope.pageClass = "contact";
   }
 })();
 (function() {
   'use strict';
 
-  angular.module('JVPortfolio.home', ['ngRoute'])
+  angular.module('JVPortfolio.home', [])
     .controller('HomeView', HomeView);
 
-  //Accueil.$inject = ["$scope","$rootScope"]; // needed for compression
-  function HomeView(){
-
+  HomeView.$inject = ["$scope"]; // needed for compression
+  function HomeView($scope){
+    var vm = $scope;
+    $scope.pageClass = "accueil";
   }
 })();

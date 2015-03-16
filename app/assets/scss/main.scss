@@ -1,3 +1,14 @@
-body{
-  color : #008000;
-}
+@import "generic/reset";
+@import "base/variable";
+@import "base/general";
+@import "base/layout";
+@import "base/animation";
+@import "pages/accueil";
+@import "pages/cv";
+@import "pages/portfolio";
+@import "pages/contact";
+@import "composant/button";
+@import "composant/menu";
+
+
+

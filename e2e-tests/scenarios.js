@@ -4,11 +4,19 @@
 
 describe('JVPortfolio', function() {
 
+  var hasClass = function (element, cls) {
+    return element.getAttribute('class').then(function (classes) {
+      return classes.split(' ').indexOf(cls) !== -1;
+    });
+
+  };
   browser.get('index.html');
 
   it('should automatically redirect to /accueil when location hash/fragment is empty', function() {
     expect(browser.getLocationAbsUrl()).toMatch("/accueil");
   });
+
+
 
 
   describe('accueil', function() {
@@ -19,10 +27,9 @@ describe('JVPortfolio', function() {
 
 
     it('should render accueil when user navigates to /accueil', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/This is the partial for Accueil/);
-    });
+      expect(hasClass(element(by.css('.page')), 'accueil')).toBe(true);
 
+    });
   });
 
 
@@ -34,10 +41,10 @@ describe('JVPortfolio', function() {
 
 
     it('should render view2 when user navigates to /contact', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/This is the partial for contact./);
+      expect(hasClass(element(by.css('.page')), 'contact')).toBe(true);
     });
 
   });
+
 
 });
