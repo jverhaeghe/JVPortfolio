@@ -100,6 +100,7 @@
     .run(function(Analytics) {
         // In case you are relying on automatic page tracking, you need to inject Analytics
         // at least once in your application (for example in the main run() block)
+
     })
 
 
@@ -177,14 +178,26 @@ google.maps = google.maps || {};
         $scope.pressButton = function(){
 
             if(vm.isActive === "unactive"){
-                $rootScope.menuIsOpen = "menu-open";
-                vm.isActive = "active";
+               showMenu();
             }else{
-                $rootScope.menuIsOpen = "menu-closed";
-                vm.isActive = "unactive";
+                hideMenu();
             }
 
+        };
+
+        function showMenu(){
+            $rootScope.menuIsOpen = "menu-open";
+            vm.isActive = "active";
         }
+
+        function hideMenu(){
+            $rootScope.menuIsOpen = "menu-closed";
+            vm.isActive = "unactive";
+        }
+
+        $rootScope.$on( "$routeChangeStart", function(event, next) {
+            hideMenu();
+        });
     }
 
 })();

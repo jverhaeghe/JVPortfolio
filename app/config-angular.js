@@ -100,6 +100,7 @@
     .run(function(Analytics) {
         // In case you are relying on automatic page tracking, you need to inject Analytics
         // at least once in your application (for example in the main run() block)
+
     })
 
 
