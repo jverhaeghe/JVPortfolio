@@ -71,7 +71,6 @@ gulp.task('watch', function() {
 
     gulp.watch('app/**/*.js', ['compile-js']);
 
-
     gulp.watch('app/**/*.html', ['compile-html']);
 
     gulp.watch('app/assets/images/**/*', ['compress-images']);

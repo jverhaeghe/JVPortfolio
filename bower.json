@@ -11,7 +11,6 @@
     "angular-loader": "1.2.x",
     "angular-mocks": "~1.2.x",
     "angular-animate": "~1.2.x",
-    "angular-google-analytics": "0.0.x",
-    "jasmine-jquery": "~2.1.0"
+    "angular-google-analytics": "0.0.x"
   }
 }

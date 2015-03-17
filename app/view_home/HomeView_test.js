@@ -2,7 +2,7 @@
 
 describe('JVPortfolio.home module', function() {
 
-  var ctrl, mockDataSrv, scope;
+  var ctrl, scope;
   beforeEach(module('JVPortfolio.home'));
 
   beforeEach(inject(function ($controller, $rootScope) {

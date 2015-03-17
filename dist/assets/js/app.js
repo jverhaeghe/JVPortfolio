@@ -166,14 +166,23 @@ google.maps = google.maps || {};
                 restrict: 'E',
                 templateUrl: 'components/layout/navicon.html'
             };
-        });;
+        });
 
 
     function NaviconController($scope,$rootScope){
+        var vm = this;
+
+        vm.isActive = 'unactive';
 
         $scope.pressButton = function(){
 
-            $rootScope.menuIsOpen = "menu-open" ? "" : "menu-open";
+            if(vm.isActive === "unactive"){
+                $rootScope.menuIsOpen = "menu-open";
+                vm.isActive = "active";
+            }else{
+                $rootScope.menuIsOpen = "menu-closed";
+                vm.isActive = "unactive";
+            }
 
         }
     }

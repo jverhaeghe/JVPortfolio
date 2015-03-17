@@ -28,8 +28,20 @@ describe('JVPortfolio', function() {
 
     it('should render accueil when user navigates to /accueil', function() {
       expect(hasClass(element(by.css('.page')), 'accueil')).toBe(true);
+    });
+
+    it('should let the user go to an other page',function() {
 
     });
+
+    it('should send data to google analytic',function() {
+
+    });
+
+    it('should be able to get the pdf CV',function() {
+
+    });
+
   });
 
 
@@ -40,9 +52,15 @@ describe('JVPortfolio', function() {
     });
 
 
-    it('should render view2 when user navigates to /contact', function() {
+    it('should render contact when user navigates to /contact', function() {
       expect(hasClass(element(by.css('.page')), 'contact')).toBe(true);
     });
+
+    it('should be able to open the menu',function() {
+
+    });
+
+
 
   });
 
