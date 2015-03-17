@@ -17,6 +17,8 @@
         /*
          * Feature areas
          */
+        'JVPortfolio.layout',
+        'JVPortfolio.map',
         'JVPortfolio.home',
         'JVPortfolio.contact'
 
