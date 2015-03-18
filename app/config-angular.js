@@ -23,11 +23,11 @@
     ])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/accueil', {
-            templateUrl: 'view_home/home.html',
+            templateUrl: 'home/home.html',
             controller: 'HomeView'
         });
         $routeProvider.when('/contact', {
-            templateUrl: 'view_contact/contact.html',
+            templateUrl: 'contact/contact.html',
             controller: 'ContactView'
         });
         $routeProvider.otherwise({
