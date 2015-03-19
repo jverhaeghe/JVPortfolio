@@ -4,12 +4,12 @@
 (function() {
     'use strict';
 
-    angular.module('JVPortfolio.layout',[])
+    angular.module('JVPortfolio.navigation')
         .controller('NaviconController', NaviconController)
         .directive('navicon', function() {
             return {
                 restrict: 'E',
-                templateUrl: 'components/layout/navicon.html'
+                templateUrl: '/navicon.html'
             };
         });
 

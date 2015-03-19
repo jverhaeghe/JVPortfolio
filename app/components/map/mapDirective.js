@@ -12,7 +12,7 @@
             var markers = [];
 
             // map config
-            console.log(scope);
+
             var mapOptions = {
                 center: new google.maps.LatLng(scope.latitude,scope.longitude),
                 zoom: 7,

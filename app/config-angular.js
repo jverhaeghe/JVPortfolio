@@ -16,7 +16,7 @@
         /*
          * Feature areas
          */
-        'JVPortfolio.layout',
+        'JVPortfolio.navigation',
         'JVPortfolio.map',
         'JVPortfolio.home',
         'JVPortfolio.contact'
@@ -29,6 +29,10 @@
         $routeProvider.when('/contact', {
             templateUrl: 'contact/contact.html',
             controller: 'ContactView'
+        });
+        $routeProvider.when('/portfolio', {
+
+            controller: 'PortfolioChoseView'
         });
         $routeProvider.otherwise({
             redirectTo: '/accueil'
