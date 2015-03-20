@@ -1,6 +1,7 @@
-    <ul>
-        <li><a href="#accueil" id="accueil" class="button">Accueil<span class="arrow"></span></a></li>
-        <li><a href="#portfolio" id="portfolio" class="button">Portfolio<span class="arrow"></span></a></li>
-        <li><a href="asset/pdf/cv_verhaeghe_julien.pdf" id="cv" class="button">C.V print<span class="arrow"></span></a></li>
-        <li><a href="#contact" id="contact" class="button">Me contacter<span class="arrow"></span></a></li>
+    <ul ng-controller="JVMenuController" class="{{currentPage}}">
+        <li><a href="#accueil" class="button btn-accueil">Accueil<span class="arrow"></span></a></li>
+        <li><a href="{{lienPorfolio}}" class="button btn-portfolio">Portfolio<span class="arrow"></span></a></li>
+        <li><a href="asset/pdf/cv_verhaeghe_julien.pdf" class="button btn-cv">C.V print<span class="arrow"></span></a></li>
+        <li><a href="#contact" class="button btn-contact">Me contacter<span class="arrow"></span></a></li>
+
     </ul>

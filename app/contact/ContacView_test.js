@@ -17,7 +17,7 @@ describe('JVPortfolio.contact module', function() {
 
     it('should be with a class ContactView', inject(function($controller) {
       //spec body
-      expect(scope.pageClass).toMatch("contact");
+      expect(scope.currentPage).toMatch("contact");
     }));
 
   });

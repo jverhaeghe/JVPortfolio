@@ -9,39 +9,26 @@
         .directive('navicon', function() {
             return {
                 restrict: 'E',
-                templateUrl: '/navicon.html'
+                templateUrl: '/components/navigation/navicon.html'
             };
         });
 
 
-    function NaviconController($scope,$rootScope){
+    function NaviconController(JVMenuService,$scope,$rootScope){
         var vm = this;
 
-        vm.isActive = 'unactive';
+        JVMenuService.isOpen = false;
 
         $scope.pressButton = function(){
 
-            if(vm.isActive === "unactive"){
-               showMenu();
+            if(JVMenuService.isOpen === false){
+                JVMenuService.showMenu();
             }else{
-                hideMenu();
+                JVMenuService.hideMenu();
             }
 
         };
 
-        function showMenu(){
-            $rootScope.menuIsOpen = "menu-open";
-            vm.isActive = "active";
-        }
-
-        function hideMenu(){
-            $rootScope.menuIsOpen = "menu-closed";
-            vm.isActive = "unactive";
-        }
-
-        $rootScope.$on( "$routeChangeStart", function(event, next) {
-            hideMenu();
-        });
     }
 
 })();

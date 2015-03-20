@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="JVPortfolio" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="JVPortfolio" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="JVPortfolio" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="JVPortfolio" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="fr" ng-app="JVPortfolio" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="fr" ng-app="JVPortfolio" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="fr" ng-app="JVPortfolio" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="fr" ng-app="JVPortfolio" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,10 +25,11 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Portfolio de Julien Verhaeghe">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./assets/css/main.min.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
   <script src="./assets/vendor/modernizer.min.js"></script>
 </head>
-<body class="{{menuIsOpen}}">
+<body watch-resize class="{{menuIsOpen}} {{device}} ">
+
   <nav class="menu">
     <h1><strong>Verhaeghe</strong><br> Julien</h1>
     <h3> <span class="tonic">+</span> Développement web &amp; mobile</h3>
@@ -41,7 +42,7 @@
   <![endif]-->
 
   <div class="view-container">
-    <div class="page {{ pageClass }}" ng-view></div>
+    <div class="page {{ currentPage }}" ng-view></div>
   </div>
 
 
@@ -53,6 +54,9 @@
   <script src="./bower_components/angular-animate/angular-animate.js"></script>
   <script src="./bower_components/angular-google-analytics/dist/angular-google-analytics.js"></script>
   <script src="./bower_components/fastclick/lib/fastclick.js"></script>
+  <script type="text/javascript"
+          src="https://maps.googleapis.com/maps/api/js">
+  </script>
   <script src="./assets/js/app.js"></script>
 
 

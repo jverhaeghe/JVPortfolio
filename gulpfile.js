@@ -25,7 +25,6 @@ gulp.task('webserver', function() {
         .pipe(server({
             livereload: true,
             directoryListing: false,
-            open: true
         }));
 });
 
@@ -42,15 +41,14 @@ gulp.task('compile-scss', function() {
     return gulp.src('app/assets/scss/main.scss')
         .pipe(sass({ style: 'expanded' }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(minifycss())
+        //.pipe(rename({suffix: '.min'}))
+        //.pipe(minifycss())
         .pipe(gulp.dest('dist/assets/css/'))
         .pipe(notify({ message: 'compile-scss task complete' }));
 });
 
 gulp.task('compile-html', function() {
     return gulp.src('app/**/*.html')
-
         .pipe(gulp.dest('dist/'))
         .pipe(notify({ message: 'All html are in place' }));
 });
@@ -67,11 +65,12 @@ gulp.task('compress-images', function() {
 // --------- WATCHER
 gulp.task('watch', function() {
 
-    gulp.watch('app/assets/scss/**/*.scss', ['compile-scss']);
+
+    gulp.watch('app/**/*.scss', ['compile-scss']);
 
     gulp.watch('app/**/*.js', ['compile-js']);
 
-    gulp.watch('app/**/*.html', ['compile-html']);
+   // gulp.watch('app/**/*.html', ['compile-html']);
 
     gulp.watch('app/assets/images/**/*', ['compress-images']);
 

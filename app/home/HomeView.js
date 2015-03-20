@@ -4,9 +4,9 @@
   angular.module('JVPortfolio.home', [])
     .controller('HomeView', HomeView);
 
-  HomeView.$inject = ["$scope"]; // needed for compression
-  function HomeView($scope){
-    var vm = $scope;
-    $scope.pageClass = "accueil";
+  HomeView.$inject = ["$rootScope"]; // needed for compression
+  function HomeView($rootScope){
+    $rootScope.currentPage = "accueil";
+
   }
 })();

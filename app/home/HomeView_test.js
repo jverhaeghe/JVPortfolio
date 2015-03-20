@@ -19,7 +19,7 @@ describe('JVPortfolio.home module', function() {
 
     it('should be with a class accueil', inject(function($controller) {
       //spec body
-      expect(scope.pageClass).toMatch("accueil");
+      expect(scope.currentPage).toMatch("accueil");
     }));
 
 

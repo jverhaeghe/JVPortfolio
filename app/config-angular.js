@@ -3,7 +3,6 @@
  */
 (function() {
     'use strict';
-
     angular.module('JVPortfolio', [
         /*
          * Everybody has access to these.
@@ -16,6 +15,7 @@
         /*
          * Feature areas
          */
+        'JVPortfolio.helper',
         'JVPortfolio.navigation',
         'JVPortfolio.map',
         'JVPortfolio.home',
@@ -31,7 +31,6 @@
             controller: 'ContactView'
         });
         $routeProvider.when('/portfolio', {
-
             controller: 'PortfolioChoseView'
         });
         $routeProvider.otherwise({
@@ -43,11 +42,23 @@
         AnalyticsProvider.setAccount('UA-60465363-1');
         // track all routes (or not)
         AnalyticsProvider.trackPages(true);
+
+        //this.menuIsOpen = appState.menuIsOpen;
     })
-    .run(function(Analytics) {
+    .run(function(Analytics,$rootScope) {
         // eliminate click delay with mobile device
         FastClick.attach(document.body);
-    })
+        // know in which type of screen we ar
+        angular.element(window).on('resize', function(){
+            if(window.innerWidth < 500){
+                $rootScope.device = "mobile";
+            }else{
+                $rootScope.device = "desktop";
+            }
+        });
+    });
+
+
 
 
 })();
