@@ -31,7 +31,7 @@
                     break
 
                 case "mobile" :
-                    vm.lienPorfolio = "#list-postfolio"
+                    vm.lienPorfolio = "#list-portfolio"
                     break
             }
         }
