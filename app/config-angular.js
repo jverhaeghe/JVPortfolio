@@ -16,7 +16,9 @@
          * Feature areas
          */
         'JVPortfolio.helper',
+        'JVPortfolio.services',
         'JVPortfolio.navigation',
+        'JVPortfolio.portfolioList',
         'JVPortfolio.map',
         'JVPortfolio.home',
         'JVPortfolio.contact'
@@ -31,7 +33,11 @@
             controller: 'ContactView'
         });
         $routeProvider.when('/portfolio', {
-            controller: 'PortfolioChoseView'
+            controller: 'PortfolioDetail'
+        });
+        $routeProvider.when('/list-portfolio', {
+            templateUrl: 'portfolio_list/portfolio_list.html',
+            controller: 'PortfolioList'
         });
         $routeProvider.otherwise({
             redirectTo: '/accueil'

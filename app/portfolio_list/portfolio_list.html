@@ -1,0 +1,18 @@
+<div class="list-projets">
+
+    <navicon></navicon>
+    <h2>Mes projets</h2>
+    <ul class="projet">
+        <li ng-repeat="current in projects">
+            <header>
+                <h3>{{current.name}}</h3>
+            </header>
+            <div class="images">
+                <img ng-src="{{current.picture[0].url}}">
+
+            </div>
+        </li>
+
+    </ul>
+
+</div>

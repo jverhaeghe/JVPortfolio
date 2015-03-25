@@ -24,7 +24,7 @@ gulp.task('webserver', function() {
     gulp.src('dist')
         .pipe(server({
             livereload: true,
-            directoryListing: false,
+            directoryListing: false
         }));
 });
 
@@ -50,7 +50,13 @@ gulp.task('compile-scss', function() {
 gulp.task('compile-html', function() {
     return gulp.src('app/**/*.html')
         .pipe(gulp.dest('dist/'))
-        .pipe(notify({ message: 'All html are in place' }));
+        /*.pipe(notify({ message: 'All html are in place' }))*/;
+});
+
+gulp.task('compile-asset', function() {
+    return gulp.src('app/**/*.json')
+        .pipe(gulp.dest('dist/'))
+        .pipe(notify({ message: 'All asset are in place' }));
 });
 
 // --------- IMAGE
@@ -84,6 +90,6 @@ gulp.task('clean', function(cb) {
 
 // --------- DEFAULT
 gulp.task('default', ['clean'], function() {
-    gulp.start('compile-scss', 'compile-js', 'compile-html','compress-images','watch','webserver')
+    gulp.start('compile-scss', 'compile-js', 'compile-html','compile-asset','compress-images','watch','webserver')
 
 });
