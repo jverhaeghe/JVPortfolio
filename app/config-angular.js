@@ -12,6 +12,7 @@
         'ngRoute',
         'ngAnimate',
         'angular-google-analytics',
+        'bhResponsiveImages',
         /*
          * Feature areas
          */

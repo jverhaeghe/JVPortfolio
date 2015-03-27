@@ -1,18 +1,23 @@
 <div class="list-projets">
+    <header class="fixie">
+        <navicon></navicon>
+        <h2>Mes projets</h2>
+    </header>
+    <div class="clear">
+        <ul class="projet">
+            <li ng-repeat="current in projects">
 
-    <navicon></navicon>
-    <h2>Mes projets</h2>
-    <ul class="projet">
-        <li ng-repeat="current in projects">
-            <header>
-                <h3>{{current.name}}</h3>
-            </header>
-            <div class="images">
-                <img ng-src="{{current.picture[0].url}}">
+                <div class="images">
+                    <a href="{{current.url}}">
+                        <img src="{{current.logo.min}}" alt="{{current.name}}"  bh-src-responsive="[ [ '(min-width: 960px)', '{{current.logo.min}}' ], [ '(min-width: 1700px)', '{{current.logo.med}}' ] ]" >
+                    </a>
+                </div>
 
-            </div>
-        </li>
 
-    </ul>
+            </li>
+
+        </ul>
+    </div>
+
 
 </div>

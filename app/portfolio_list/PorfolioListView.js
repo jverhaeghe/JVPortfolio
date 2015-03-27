@@ -7,8 +7,9 @@
     angular.module('JVPortfolio.portfolioList', [])
         .controller('PortfolioList', PortfolioList);
 
-    PortfolioList.$inject = ["$scope","Projects"]; // needed for compression
-    function PortfolioList($scope,Projects){
+    PortfolioList.$inject = ["$rootScope","$scope","Projects"]; // needed for compression
+    function PortfolioList($rootScope,$scope,Projects){
+        $rootScope.currentPage = "list-portfolio";
         var vm = $scope;
         vm.projects = Projects.query();
     }

@@ -61,9 +61,9 @@ gulp.task('compile-asset', function() {
 
 // --------- IMAGE
 gulp.task('compress-images', function() {
-    return gulp.src('app/asset/images/**/*')
+    return gulp.src('app/assets/images/*.jpg')
         .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-        .pipe(gulp.dest('dist/asset/images'))
+        .pipe(gulp.dest('dist/assets/images'))
         .pipe(notify({ message: 'Images are compressed' }));
 });
 
@@ -85,7 +85,7 @@ gulp.task('watch', function() {
 
 // --------- CLEAN
 gulp.task('clean', function(cb) {
-    del(['app/assets/css', 'app/assets/js', 'app/assets/images'], cb)
+    del(['app/assets/css', 'app/assets/js'], cb)
 });
 
 // --------- DEFAULT
