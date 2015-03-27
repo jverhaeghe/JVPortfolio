@@ -37,3 +37,16 @@ h3{
   text-align: center;
 }
 
+.fixie{
+  position: fixed;
+  width: 100%;
+  z-index: 666;
+  background: white;
+  top: 0;
+  height: 80px;
+  padding-top: 26px;
+}
+
+.images img{
+  max-width: 100%;
+}

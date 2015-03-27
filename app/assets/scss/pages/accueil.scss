@@ -1,10 +1,10 @@
 .accueil{
 
-  #accueil{
+
+
+  .btn-accueil{
     display: none;
   }
-
-
   > div {
     margin: 10px 0 0 0;
     @include tablet {
